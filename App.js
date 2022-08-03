@@ -33,7 +33,13 @@
     render() {
         return (
             <View style={styles.container}>
-                <Button title="Calculate inflation" onPress={() => Analytics.trackEvent('calculate_inflation')} />
+                {
+                    /**  
+                     * eventName  {string}
+                     * properties {object} - The properties can be anything you want (similar to bugsnag)
+                     */
+                }
+                <Button title="Calculate inflation" onPress={() => Analytics.trackEvent('calculate_inflation', { Internet: 'Cellular', GPS: 'On' })} />
             </View>
         );
     }
