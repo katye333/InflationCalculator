@@ -8,6 +8,7 @@
 
  import React from 'react';
  import Crashes from 'appcenter-crashes';
+ import Analytics from 'appcenter-analytics';
  import {
    Button,
    StyleSheet,
@@ -32,8 +33,7 @@
     render() {
         return (
             <View style={styles.container}>
-                <Button title="Crash"
-                    onPress={() => Crashes.generateTestCrash()} />
+                <Button title="Calculate inflation" onPress={() => Analytics.trackEvent('calculate_inflation')} />
             </View>
         );
     }
